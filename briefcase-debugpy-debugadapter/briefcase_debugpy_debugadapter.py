@@ -5,7 +5,7 @@ import re
 import sys
 import traceback
 from pathlib import Path
-from typing import TypedDict
+from typing import TypedDict, List, Tuple, Optional
 
 import debugpy
 
@@ -13,8 +13,8 @@ REMOTE_DEBUGGER_STARTED = False
 
 class AppPathMappings(TypedDict):
     device_sys_path_regex: str
-    device_subfolders: list[str]
-    host_folders: list[str]
+    device_subfolders: List[str]
+    host_folders: List[str]
 
 
 class AppPackagesPathMappings(TypedDict):
@@ -23,11 +23,11 @@ class AppPackagesPathMappings(TypedDict):
 
 
 class PathMappings(TypedDict):
-    app_path_mappings: AppPathMappings | None
-    app_packages_path_mappings: AppPackagesPathMappings | None
+    app_path_mappings: Optional[AppPathMappings]
+    app_packages_path_mappings: Optional[AppPackagesPathMappings]
 
 
-def _load_path_mappings(verbose: bool) -> list[tuple[str, str]]:
+def _load_path_mappings(verbose: bool) -> List[Tuple[str, str]]:
     path_mappings = os.environ.get("BRIEFCASE_DEBUGGER_PATH_MAPPINGS", None)
 
     mappings_dict: PathMappings = json.loads(path_mappings)
