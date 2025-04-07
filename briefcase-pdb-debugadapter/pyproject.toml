@@ -7,6 +7,6 @@ name = "briefcase-pdb-debugadapter"
 version = "0.1.0"
 description = "Add-on for briefcase to add remote debugging via pdb."
 readme = "README.md"
-license = "MIT"
+license = { file = "MIT" }
 authors = [{ name = "Tim Riddermann" }]
 dependencies = []
