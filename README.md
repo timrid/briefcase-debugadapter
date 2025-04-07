@@ -1,13 +1,21 @@
-# Briefcase Remote Debugger
-This package is an helper package for remote debugging of applications packed with briefcase.
+# Briefcase Debugadater
+This package contains some debugadapters as helper package for debugging support of applications packed with briefcase.
 
 ## Installation
 Normally you dont need to install this package, becaus it is done automatically by briefcase.
 
 But in theory it can also be used without briefcase. Then it can be installed via:
+
+pdb:
 ```
-pip install git+https://github.com/timrid/briefcase-remote-debugger@main
+pip install git+https://github.com/timrid/briefcase-debugadapter#subdirectory=briefcase-pdb-debugadapter
 ```
+
+debugpy:
+```
+pip install git+https://github.com/timrid/briefcase-debugadapter#subdirectory=briefcase-debugpy-debugadapter
+```
+
 
 ## Usage
 This package currently supports the following remote debuggers:
