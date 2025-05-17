@@ -23,4 +23,4 @@ This package currently supports the following remote debuggers:
 - pdb (through forwarding stdin/stdout via a socket)
 - debugpy
 
-This packages starts the remote debugger automatically at startup through an .pth file, if a `BRIEFCASE_REMOTE_DEBUGGER` enviornment variable is set.
+This packages starts the remote debugger automatically at startup through an .pth file, if a `BRIEFCASE_DEBUGGER` environment variable is set.
